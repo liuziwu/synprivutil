@@ -1,0 +1,452 @@
+1763384968.981975 client started (3006790): version 3.2a, socket /tmp/tmux-1050/default, protocol 8
+1763384968.982021 on Linux 5.15.0-134-generic #145-Ubuntu SMP Wed Feb 12 20:08:39 UTC 2025
+1763384968.982034 using libevent 2.1.12-stable (poll); ncurses 6.3
+1763384968.982093 flags are 0x18010000
+1763384968.982103 socket is /tmp/tmux-1050/default
+1763384968.982125 trying connect
+1763384968.982232 add peer 0x564a2d62e530: 6 ((nil))
+1763384968.982880 sending message 100 to peer 0x564a2d62e530 (4 bytes)
+1763384968.982899 sending message 111 to peer 0x564a2d62e530 (8 bytes)
+1763384968.982910 sending message 101 to peer 0x564a2d62e530 (15 bytes)
+1763384968.982921 sending message 109 to peer 0x564a2d62e530 (4 bytes)
+1763384968.982931 sending message 102 to peer 0x564a2d62e530 (13 bytes)
+1763384968.982941 sending message 108 to peer 0x564a2d62e530 (33 bytes)
+1763384968.982951 sending message 112 to peer 0x564a2d62e530 (58 bytes)
+1763384968.982962 sending message 112 to peer 0x564a2d62e530 (5 bytes)
+1763384968.982972 sending message 112 to peer 0x564a2d62e530 (5 bytes)
+1763384968.982982 sending message 112 to peer 0x564a2d62e530 (6 bytes)
+1763384968.982991 sending message 112 to peer 0x564a2d62e530 (6 bytes)
+1763384968.983001 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.983011 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.983021 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983032 sending message 112 to peer 0x564a2d62e530 (14 bytes)
+1763384968.983041 sending message 112 to peer 0x564a2d62e530 (19 bytes)
+1763384968.983051 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.983060 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.983070 sending message 112 to peer 0x564a2d62e530 (15 bytes)
+1763384968.983080 sending message 112 to peer 0x564a2d62e530 (21 bytes)
+1763384968.983090 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983100 sending message 112 to peer 0x564a2d62e530 (7 bytes)
+1763384968.983110 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983120 sending message 112 to peer 0x564a2d62e530 (7 bytes)
+1763384968.983129 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983139 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.983149 sending message 112 to peer 0x564a2d62e530 (21 bytes)
+1763384968.983159 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983169 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.983179 sending message 112 to peer 0x564a2d62e530 (16 bytes)
+1763384968.983189 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983199 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.983208 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.983218 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983228 sending message 112 to peer 0x564a2d62e530 (8 bytes)
+1763384968.983238 sending message 112 to peer 0x564a2d62e530 (8 bytes)
+1763384968.983248 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983258 sending message 112 to peer 0x564a2d62e530 (7 bytes)
+1763384968.983269 sending message 112 to peer 0x564a2d62e530 (7 bytes)
+1763384968.983278 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.983288 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.983297 sending message 112 to peer 0x564a2d62e530 (15 bytes)
+1763384968.983307 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983317 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983327 sending message 112 to peer 0x564a2d62e530 (8 bytes)
+1763384968.983337 sending message 112 to peer 0x564a2d62e530 (14 bytes)
+1763384968.983347 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.983356 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.983366 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.983376 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.983386 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.983396 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.983417 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.983427 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983437 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983447 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983457 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983466 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983476 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.983486 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.983496 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983506 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983516 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983525 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983535 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983545 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.983555 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983565 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983575 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983585 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983594 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983604 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983614 sending message 112 to peer 0x564a2d62e530 (8 bytes)
+1763384968.983624 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.983634 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.983644 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.983654 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983664 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983673 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983683 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983693 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983702 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983712 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983722 sending message 112 to peer 0x564a2d62e530 (8 bytes)
+1763384968.983732 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983742 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983752 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983761 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983771 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983781 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983790 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983800 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983810 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983820 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983830 sending message 112 to peer 0x564a2d62e530 (8 bytes)
+1763384968.983840 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983850 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983860 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983870 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983880 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983890 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983899 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983909 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983919 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983928 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983938 sending message 112 to peer 0x564a2d62e530 (8 bytes)
+1763384968.983948 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.983958 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983968 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983984 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.983994 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984004 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984014 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984024 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984034 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984044 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984054 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984064 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984073 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984083 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984093 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984102 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984112 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984122 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984132 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984142 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984152 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984162 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984171 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984181 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984191 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984201 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984211 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984221 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984231 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984240 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984250 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984260 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984269 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984280 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984290 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984300 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984309 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.984319 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984329 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984338 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984348 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984358 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984368 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.984378 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984389 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984398 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984408 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984417 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984427 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984437 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984447 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984457 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.984467 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984476 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984486 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984496 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984505 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984515 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984525 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.984535 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984551 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984561 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984570 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984580 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984590 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984600 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.984610 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984620 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984633 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984642 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984651 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984660 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984671 sending message 112 to peer 0x564a2d62e530 (11 bytes)
+1763384968.984681 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984690 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984700 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984714 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984723 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984733 sending message 112 to peer 0x564a2d62e530 (21 bytes)
+1763384968.984742 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984752 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.984762 sending message 112 to peer 0x564a2d62e530 (6 bytes)
+1763384968.984772 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984782 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984791 sending message 112 to peer 0x564a2d62e530 (24 bytes)
+1763384968.984800 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984810 sending message 112 to peer 0x564a2d62e530 (9 bytes)
+1763384968.984819 sending message 112 to peer 0x564a2d62e530 (70 bytes)
+1763384968.984829 sending message 112 to peer 0x564a2d62e530 (69 bytes)
+1763384968.984839 sending message 112 to peer 0x564a2d62e530 (12 bytes)
+1763384968.984849 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984858 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984871 sending message 112 to peer 0x564a2d62e530 (24 bytes)
+1763384968.984881 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984890 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984900 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984910 sending message 112 to peer 0x564a2d62e530 (10 bytes)
+1763384968.984920 sending message 112 to peer 0x564a2d62e530 (13 bytes)
+1763384968.984929 sending message 112 to peer 0x564a2d62e530 (15 bytes)
+1763384968.984939 sending message 112 to peer 0x564a2d62e530 (5 bytes)
+1763384968.984951 sending message 104 to peer 0x564a2d62e530 (0 bytes)
+1763384968.984964 sending message 110 to peer 0x564a2d62e530 (0 bytes)
+1763384968.984977 sending message 107 to peer 0x564a2d62e530 (4 bytes)
+1763384968.984987 sending message 105 to peer 0x564a2d62e530 (9 bytes)
+1763384968.984997 sending message 105 to peer 0x564a2d62e530 (36 bytes)
+1763384968.985007 sending message 105 to peer 0x564a2d62e530 (21 bytes)
+1763384968.985016 sending message 105 to peer 0x564a2d62e530 (8 bytes)
+1763384968.985026 sending message 105 to peer 0x564a2d62e530 (39 bytes)
+1763384968.985040 sending message 105 to peer 0x564a2d62e530 (15 bytes)
+1763384968.985050 sending message 105 to peer 0x564a2d62e530 (15 bytes)
+1763384968.985059 sending message 105 to peer 0x564a2d62e530 (116 bytes)
+1763384968.985069 sending message 105 to peer 0x564a2d62e530 (54 bytes)
+1763384968.985079 sending message 105 to peer 0x564a2d62e530 (12 bytes)
+1763384968.985088 sending message 105 to peer 0x564a2d62e530 (16 bytes)
+1763384968.985098 sending message 105 to peer 0x564a2d62e530 (23 bytes)
+1763384968.985108 sending message 105 to peer 0x564a2d62e530 (22 bytes)
+1763384968.985118 sending message 105 to peer 0x564a2d62e530 (494 bytes)
+1763384968.985133 sending message 105 to peer 0x564a2d62e530 (31 bytes)
+1763384968.985143 sending message 105 to peer 0x564a2d62e530 (17 bytes)
+1763384968.985152 sending message 105 to peer 0x564a2d62e530 (19 bytes)
+1763384968.985162 sending message 105 to peer 0x564a2d62e530 (37 bytes)
+1763384968.985171 sending message 105 to peer 0x564a2d62e530 (26 bytes)
+1763384968.985180 sending message 105 to peer 0x564a2d62e530 (54 bytes)
+1763384968.985194 sending message 105 to peer 0x564a2d62e530 (65 bytes)
+1763384968.985204 sending message 105 to peer 0x564a2d62e530 (25 bytes)
+1763384968.985214 sending message 105 to peer 0x564a2d62e530 (11 bytes)
+1763384968.985224 sending message 105 to peer 0x564a2d62e530 (8 bytes)
+1763384968.985233 sending message 105 to peer 0x564a2d62e530 (32 bytes)
+1763384968.985243 sending message 105 to peer 0x564a2d62e530 (1519 bytes)
+1763384968.985282 sending message 105 to peer 0x564a2d62e530 (40 bytes)
+1763384968.985293 sending message 105 to peer 0x564a2d62e530 (7 bytes)
+1763384968.985303 sending message 105 to peer 0x564a2d62e530 (11 bytes)
+1763384968.985313 sending message 105 to peer 0x564a2d62e530 (48 bytes)
+1763384968.985323 sending message 105 to peer 0x564a2d62e530 (14 bytes)
+1763384968.985333 sending message 105 to peer 0x564a2d62e530 (33 bytes)
+1763384968.985343 sending message 105 to peer 0x564a2d62e530 (23 bytes)
+1763384968.985352 sending message 105 to peer 0x564a2d62e530 (30 bytes)
+1763384968.985363 sending message 105 to peer 0x564a2d62e530 (101 bytes)
+1763384968.985373 sending message 105 to peer 0x564a2d62e530 (20 bytes)
+1763384968.985394 sending message 105 to peer 0x564a2d62e530 (28 bytes)
+1763384968.985406 sending message 105 to peer 0x564a2d62e530 (20 bytes)
+1763384968.985416 sending message 105 to peer 0x564a2d62e530 (113 bytes)
+1763384968.985426 sending message 105 to peer 0x564a2d62e530 (99 bytes)
+1763384968.985435 sending message 105 to peer 0x564a2d62e530 (31 bytes)
+1763384968.985445 sending message 105 to peer 0x564a2d62e530 (130 bytes)
+1763384968.985456 sending message 105 to peer 0x564a2d62e530 (64 bytes)
+1763384968.985466 sending message 105 to peer 0x564a2d62e530 (33 bytes)
+1763384968.985476 sending message 105 to peer 0x564a2d62e530 (168 bytes)
+1763384968.985486 sending message 105 to peer 0x564a2d62e530 (116 bytes)
+1763384968.985495 sending message 105 to peer 0x564a2d62e530 (88 bytes)
+1763384968.985505 sending message 105 to peer 0x564a2d62e530 (19 bytes)
+1763384968.985515 sending message 105 to peer 0x564a2d62e530 (18 bytes)
+1763384968.985525 sending message 105 to peer 0x564a2d62e530 (23 bytes)
+1763384968.985535 sending message 105 to peer 0x564a2d62e530 (20 bytes)
+1763384968.985545 sending message 105 to peer 0x564a2d62e530 (35 bytes)
+1763384968.985555 sending message 105 to peer 0x564a2d62e530 (64 bytes)
+1763384968.985565 sending message 106 to peer 0x564a2d62e530 (0 bytes)
+1763384968.985582 cmd_pack_argv: argv[0]=new
+1763384968.985592 cmd_pack_argv: argv[1]=-s
+1763384968.985601 cmd_pack_argv: argv[2]=fest
+1763384968.985611 sending message 200 to peer 0x564a2d62e530 (16 bytes)
+1763384968.985621 client loop enter
+1763384968.993291 peer 0x564a2d62e530 message 207
+1763384968.993315 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.767843 client_signal: Window changed
+1763385312.767897 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.768164 client_signal: Window changed
+1763385312.768190 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.768403 client_signal: Window changed
+1763385312.768426 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.768644 client_signal: Window changed
+1763385312.768662 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.768948 client_signal: Window changed
+1763385312.768970 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.769208 client_signal: Window changed
+1763385312.769231 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.771914 client_signal: Window changed
+1763385312.771943 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.773156 client_signal: Window changed
+1763385312.773180 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.777257 client_signal: Window changed
+1763385312.777289 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.852067 client_signal: Window changed
+1763385312.852111 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.852618 client_signal: Window changed
+1763385312.852638 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.853524 client_signal: Window changed
+1763385312.853543 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.927327 client_signal: Window changed
+1763385312.927366 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385312.928072 client_signal: Window changed
+1763385312.928095 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385430.853949 client_signal: Window changed
+1763385430.854007 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385955.670885 client_signal: Window changed
+1763385955.670930 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385966.021454 client_signal: Window changed
+1763385966.021501 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385966.021567 client_signal: Window changed
+1763385966.021579 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385966.021795 client_signal: Window changed
+1763385966.021807 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385966.022028 client_signal: Window changed
+1763385966.022040 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385966.022384 client_signal: Window changed
+1763385966.022396 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385966.024622 client_signal: Window changed
+1763385966.024651 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385966.051888 client_signal: Window changed
+1763385966.051930 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763385966.096363 client_signal: Window changed
+1763385966.096399 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763386719.521584 client_signal: Window changed
+1763386719.521634 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763386722.500479 client_signal: Window changed
+1763386722.500522 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763388471.879418 client_signal: Window changed
+1763388471.879467 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763388475.004021 client_signal: Window changed
+1763388475.004065 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763389069.615253 client_signal: Window changed
+1763389069.615304 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763389069.845633 client_signal: Window changed
+1763389069.845651 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390226.212040 client_signal: Window changed
+1763390226.212075 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390263.619467 client_signal: Window changed
+1763390263.619515 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390263.620235 client_signal: Window changed
+1763390263.620252 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390263.621677 client_signal: Window changed
+1763390263.621705 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390263.621807 client_signal: Window changed
+1763390263.621827 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390263.706734 client_signal: Window changed
+1763390263.706771 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390511.806202 client_signal: Window changed
+1763390511.806256 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390511.807815 client_signal: Window changed
+1763390511.807839 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390511.808956 client_signal: Window changed
+1763390511.808983 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390511.886244 client_signal: Window changed
+1763390511.886282 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390511.887074 client_signal: Window changed
+1763390511.887098 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390511.887637 client_signal: Window changed
+1763390511.887654 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390511.888144 client_signal: Window changed
+1763390511.888171 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390511.891123 client_signal: Window changed
+1763390511.891149 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.201649 client_signal: Window changed
+1763390935.201697 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.261364 client_signal: Window changed
+1763390935.261419 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.262576 client_signal: Window changed
+1763390935.262598 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.263490 client_signal: Window changed
+1763390935.263514 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.295919 client_signal: Window changed
+1763390935.295954 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.335569 client_signal: Window changed
+1763390935.335602 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.361475 client_signal: Window changed
+1763390935.361508 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.376355 client_signal: Window changed
+1763390935.376387 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.396796 client_signal: Window changed
+1763390935.396828 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.420756 client_signal: Window changed
+1763390935.420788 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.456747 client_signal: Window changed
+1763390935.456779 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.560865 client_signal: Window changed
+1763390935.560898 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390935.620911 client_signal: Window changed
+1763390935.620944 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390938.171602 client_signal: Window changed
+1763390938.171643 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390944.671321 client_signal: Window changed
+1763390944.671365 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390944.672305 client_signal: Window changed
+1763390944.672318 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763390944.672863 client_signal: Window changed
+1763390944.672874 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763394000.761066 client_signal: Window changed
+1763394000.761101 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763394000.790035 client_signal: Window changed
+1763394000.790054 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763394000.804964 client_signal: Window changed
+1763394000.804980 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763394000.835089 client_signal: Window changed
+1763394000.835103 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763394000.844573 client_signal: Window changed
+1763394000.844587 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763394000.880296 client_signal: Window changed
+1763394000.880312 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763394000.925217 client_signal: Window changed
+1763394000.925233 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763394001.009954 client_signal: Window changed
+1763394001.009973 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763394001.010501 client_signal: Window changed
+1763394001.010513 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763396565.530587 client_signal: Window changed
+1763396565.530616 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763396672.957403 client_signal: Window changed
+1763396672.957456 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763396672.957728 client_signal: Window changed
+1763396672.957745 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763396672.958332 client_signal: Window changed
+1763396672.958350 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763396672.958680 client_signal: Window changed
+1763396672.958696 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763396672.958825 client_signal: Window changed
+1763396672.958852 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763396673.141267 client_signal: Window changed
+1763396673.141310 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763400189.232397 client_signal: Window changed
+1763400189.232448 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763400198.116948 client_signal: Window changed
+1763400198.116993 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763400198.118133 client_signal: Window changed
+1763400198.118150 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763400198.118808 client_signal: Window changed
+1763400198.118825 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763400198.119099 client_signal: Window changed
+1763400198.119113 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763400198.119196 client_signal: Window changed
+1763400198.119208 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763400198.195783 client_signal: Window changed
+1763400198.195821 sending message 208 to peer 0x564a2d62e530 (0 bytes)
+1763400545.677333 client_signal: Hangup
+1763400545.677376 sending message 205 to peer 0x564a2d62e530 (0 bytes)
+1763400545.679282 client_signal: Hangup
+1763400545.679307 sending message 205 to peer 0x564a2d62e530 (0 bytes)
+1763400545.679977 peer 0x564a2d62e530 message 204
+1763400545.679990 peer 0x564a2d62e530 message 204
+1763400545.680000 client loop exit

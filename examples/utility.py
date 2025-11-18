@@ -1,3 +1,7 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+
 import pandas as pd
 
 from privacy_utility_framework.privacy_utility_framework.metrics.utility_metrics.statistical.basic_stats import \
@@ -117,10 +121,10 @@ def utility_metric_manager_example():
     for key, value in results.items():
         print(f"{key}: {value}")
 
-# wasserstein_example()
-# mutual_information_example()
-# ks_example()
-# js_similarity_example()
-# correlation_example()
-# basic_stats_example()
-# utility_metric_manager_example()
+wasserstein_example()
+mutual_information_example()
+ks_example()
+js_similarity_example()
+correlation_example()
+basic_stats_example()
+utility_metric_manager_example()

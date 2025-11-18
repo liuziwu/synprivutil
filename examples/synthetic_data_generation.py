@@ -1,3 +1,8 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+
+import os
 import pandas as pd
 from sdv.metadata import SingleTableMetadata
 
@@ -9,6 +14,9 @@ def syn_generation_example():
     orig = "insurance"
     # Specify the folder for saving datasets
     folder = f"{orig}_datasets"
+    
+    syn_save_dir = f"{folder}/syn_on_train"
+    os.makedirs(syn_save_dir, exist_ok=True)
 
     # Flag indicating whether to use the training dataset
     use_train = True

@@ -1,122 +1,236 @@
-**This is the repository for the thesis work "Design and Implementation of a Platform for Privacy Assessment of Synthetic Data Generation with Generative AI"  done at Communication Systems Group, University of Zurich, supervised by Mr. Weijie Niu, Dr. Alberto Huertas Celdran and Prof. Dr. Burkhard Stiller.**
+# FEST Framework Reproduction Guide
 
-# Synthetic Data Privacy and Utility Framework
+## 1. Project Background
 
-This project provides a python library for generating synthetic datasets and evaluating their privacy and utility. It includes tools for creating synthetic data, performing various privacy and utility analyses, and visualizing results through plots. The framework is designed to help researchers and developers assess the balance between data utility and privacy in synthetic datasets.
+**Core Objective**: Reproduce the FEST framework's "privacy assessment" and "utility assessment" of synthetic data, and verify the "privacy-utility trade-off" relationship.
 
-## Prerequisites
-The python version 3.10 was used to develop this framework.
-For the following packages, these versions were used:
-- Numpy version: 1.26.4
-- Pandas version: 2.2.2
-- SDV version: 1.15.0
-- Scikit-learn version: 1.5.1
-- Seaborn version: 0.12.2
-- Matplotlib version: 3.9.2
-- RDT version: 1.12.3
-- Anonymeter version: 1.0.0
-- Scipy version: 1.13.0
-- Dython version: 0.7.8
-- OT version: 0.9.4
-## Installation
-No other installation, besides cloning this repository is needed.
+**Key Outputs**:
+- Privacy/utility metrics for 6 synthetic models (CTGAN, GMM, CopulaGAN, etc.)
+- 5 types of core visualization plots from the paper (corresponding to Figures 3–7)
 
-## Content
+## 2. Prerequisites (Completed Items)
 
-- datasets: in this folder, the original and synthetic datasets can be found. The following original datasets were used: [Diabetes](https://www.kaggle.com/datasets/akshaydattatraykhare/diabetes-dataset), [Cardio](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset) and [Insurance](https://www.kaggle.com/datasets/mirichoi0218/insurance).
-- examples:
-  - dataset_transform_normalization.py: Example of how to transform and normalize a dataset.
-  - plots.py: Some plot functions that show how plots can be generated.
-  - privacy_attacks.py: Usage-Example for each attacker-based privacy metric.
-  - privacy_distance.py: Usage-Example for each distance-based privacy metric.
-  - synthetic_data_generation.py: Example on how to generate synthetic data.
-  - train_test.py: Example of creating train and test datasets.
-  - utility.py: Usage-Example for each utility metric.
-- plots: includes different kind of generated plots from the original and synthetic datasets.
-- privacy_utility_framework: includes the framework code.
-  - privacy_utility_framework:
-    - dataset: includes the implementation of the Dataset object used across the code.
-    - metrics: includes all privacy and utility metrics.
-    - plots: includes the code for the available plots.
-    - synthesizers: includes the implementation of all synthetic data generation models.
-    - utils: utility functions, includes only dynamic_train_test_split at the moment.
-- synthetic_models: includes the saved fitted models.
+Ensure the following are ready before starting:
 
-## Example Usage
+**System Environment**: Linux (Python 3.10 and dependencies like sdv, anonymeter, and matplotlib are installed)
 
-Below is an example of how to generate synthetic data using the `GaussianMixtureModel`.
+**Code Preparation**:
+- The synprivutil repository is cloned
+- All scripts (e.g., train_test.py) have resolved "module not found" errors (by adding the repository root to Python's search path)
 
-```python
-# Load original dataset
-original_data = pd.read_csv('../examples/insurance_datasets/train/insurance.csv')
+**Data Foundation**: The 3 core datasets (diabetes.csv, cardio.csv, insurance.csv) exist in the `datasets/original/` directory
 
-# Create metadata for the dataset
-metadata = SingleTableMetadata()
-metadata.detect_from_dataframe(original_data)
+## 3. Core Reproduction Workflow (Execute in Order)
 
-# Initialize the Gaussian Mixture Model with a max of 10 components
-gmm_model = GaussianMixtureModel(max_components=10)
-# Fit the model on the original data
-gmm_model.fit(original_data)
+### Phase 1: Data Preparation (Generate Training/Test Sets)
 
-# Generate synthetic data
-synthetic_data = gmm_model.sample(len(original_data))
+**Run Script**: `examples/train_test.py`
 
-# Save synthetic data to a CSV file
-gmm_model.save_sample("gmm_sample.csv", len(original_data))
+**Purpose**: Split raw data into a training set (for synthetic data generation) and a test set (for privacy attack control groups)
 
-print("Synthetic data generated and saved to gmm_sample.csv.")
+**Dependencies**: `datasets/original/insurance.csv` (use the insurance dataset as an example; extendable to others)
+
+**Operation**:
+```bash
+# Navigate to the examples directory
+cd synprivutil/examples  
+# Run the script
+python train_test.py
 ```
 
-Here is an example of how to use the `PrivacyMetricManager` to evaluate privacy metrics between original and synthetic datasets.
+**Expected Output**:
+- `insurance_datasets/train/insurance.csv` (≈1,070 rows)
+- `insurance_datasets/test/insurance.csv` (≈268 rows)
 
-```python
-original_data = pd.read_csv(f"../datasets/original/diabetes.csv")
-synthetic_data = pd.read_csv(f"../datasets/synthetic/diabetes_datasets/ctgan_sample.csv")
-
-original_name = "Diabetes"
-synthetic_name = "CTGAN"
-
-p = PrivacyMetricManager()
-
-metric_list = \
-    [
-        DCRCalculator(original_data, synthetic_data, original_name=original_name, synthetic_name=synthetic_name),
-        NNDRCalculator(original_data, synthetic_data, original_name=original_name, synthetic_name=synthetic_name),
-        AdversarialAccuracyCalculator(original_data, synthetic_data, original_name=original_name,
-                                      synthetic_name=synthetic_name)
-    ]
-p.add_metric(metric_list)
-results = p.evaluate_all()
-for key, value in results.items():
-    print(f"{key}: {value}")
+**Verification**:
+```bash
+# Check if training/test files exist
+ls insurance_datasets/train/ && ls insurance_datasets/test/
 ```
 
-Here is another example of how to use the `UtilityMetricManager` to evaluate utility metrics between original and synthetic datasets. This example demonstrates the use of basic statistics and mutual information metrics.
+### Phase 2: Generate Synthetic Data
 
-```python
-# Load original and synthetic datasets
-original_data = pd.read_csv("../datasets/original/insurance.csv")
-synthetic_data = pd.read_csv("../datasets/synthetic/insurance_datasets/ctgan_sample.csv")
+**Run Script**: `examples/synthetic_data_generation.py`
 
-# Specify dataset names for identification
-original_name = "Insurance"
-synthetic_name = "CTGAN"
+**Purpose**: Use 6 models to generate synthetic data matching the training set size:
+- Statistical models: Gaussian Mixture (GMM), Gaussian Copula (GC)
+- Deep learning models: CTGAN, CopulaGAN, TVAE
+- Baseline: Random Model
 
-# Initialize UtilityMetricManager
-p = UtilityMetricManager()
+**Dependencies**: Training set from Phase 1 (`insurance_datasets/train/insurance.csv`)
 
-# Define metrics to evaluate
-metric_list = [
-    BasicStatsCalculator(original_data, synthetic_data, original_name=original_name, synthetic_name=synthetic_name),
-    MICalculator(original_data, synthetic_data, original_name=original_name, synthetic_name=synthetic_name),
-]
-
-# Add metrics to manager and evaluate
-p.add_metric(metric_list)
-results = p.evaluate_all()
-
-# Print results
-for key, value in results.items():
-    print(f"{key}: {value}")
+**Operation**:
+```bash
+# Ensure you are in the examples directory
+python synthetic_data_generation.py
 ```
+
+**Duration**: 10–15 minutes (CTGAN/CopulaGAN take longer due to neural network training)
+
+**Expected Output**:
+- 6 synthetic data files (e.g., `ctgan_sample.csv`, `gmm_sample.csv`) in `insurance_datasets/syn_on_train/`
+- Corresponding model files (e.g., `ctgan_model.pkl`) for re-use
+
+**Verification**:
+```bash
+# Check for synthetic data files
+ls insurance_datasets/syn_on_train/*.csv
+```
+
+### Phase 3: Data Preprocessing (Run On-Demand)
+
+**Run Script**: `examples/dataset_transform_normalization.py`
+
+**Purpose**: Standardize raw/synthetic data to resolve format issues:
+- Encode categorical variables (e.g., sex, smoker)
+- Normalize numerical variables (e.g., scale age [18–64] and charges [1k–60k] to the same range)
+
+**Dependencies**:
+- Raw data: `datasets/original/insurance.csv`
+- Synthetic data: `insurance_datasets/syn_on_train/xxx_sample.csv`
+
+**Operation**:
+```bash
+# Ensure you are in the examples directory
+python dataset_transform_normalization.py
+```
+
+**When to Run**:
+- ✅ Mandatory: If you later calculate distance-based privacy metrics (DCR/NNDR) or plot pairwise relationship graphs
+- ❌ Optional: If you only evaluate attack-based privacy metrics or basic utility metrics (e.g., KS similarity)
+
+**Success Criterion**: The script prints normalized data (e.g., `original_dataset.transformed_normalized_data`) without errors
+
+### Phase 4: Privacy Assessment (Core Metrics)
+
+Privacy assessment has two sub-types: attack-based (simulate real-world attacks) and distance-based (measure data similarity).
+
+#### 4.1 Attack-Based Privacy Metrics
+
+**Script**: `examples/privacy_attacks.py`
+
+**Metrics Evaluated**:
+- **Singling Out Risk**: Risk of identifying a unique individual via attribute combinations
+- **Linkability Risk**: Risk of linking data from multiple sources to identify an individual
+- **Inference Risk**: Risk of deducing sensitive attributes (e.g., charges) from auxiliary data (e.g., age, bmi)
+
+**Dependencies**: Training/test sets (Phase 1), synthetic data (Phase 2)
+
+**Operation**:
+```bash
+python privacy_attacks.py
+```
+
+**Duration**: 5–8 minutes
+
+**Expected Results (Consistent with Paper Table 8)**:
+
+| Model | Singling Out Risk | Linkability Risk | Inference Risk |
+|-------|-------------------|------------------|----------------|
+| CTGAN | ~0.11–0.13 | ~0.0–0.03 | ~0.04 |
+| GMM | ~0.06–0.12 | ~0.002 | ~0.01 |
+| Random | ~0.996 | ~0.989 | ~0.99 |
+
+#### 4.2 Distance-Based Privacy Metrics
+
+**Script**: `examples/privacy_distance.py`
+
+**Metrics Evaluated**:
+- **DCR (Distance of Closest Record)**: Average distance between synthetic and raw data points (higher = better privacy)
+- **NNDR (Nearest Neighbor Distance Ratio)**: Measure of data point isolation (higher = lower re-identification risk)
+- **repU (Replicated Uniques)**: Risk of replicating unique raw data records (lower = better privacy)
+- **DiSCO (Disclosive in Synthetic Correct Original)**: Risk of attribute disclosure (lower = better privacy)
+- **NNAA (Nearest-Neighbor Adversarial Accuracy)**: Privacy-utility balance (closer to 0.5 = better balance)
+
+**Dependencies**: Raw data (Phase 1), synthetic data (Phase 2); preprocessed data (Phase 3) for accuracy
+
+**Operation**:
+```bash
+python privacy_distance.py
+```
+
+**Duration**: 3–5 minutes
+
+**Expected Results (Consistent with Paper Table 7)**:
+
+| Model | DCR | NNDR | repU | DiSCO | NNAA |
+|-------|-----|------|------|-------|------|
+| CTGAN | ~0.27 | ~0.83 | 0.0 | 0.0 | ~0.73 |
+| GMM | ~0.14 | ~0.77 | 0.0 | 0.0 | ~0.58 |
+| Random | 0.0 | 0.0 | ~98.5 | ~98.7 | 0.0 |
+
+### Phase 5: Utility Assessment (Core Metrics)
+
+**Run Script**: `examples/utility.py`
+
+**Purpose**: Verify if synthetic data retains the statistical properties of raw data (critical for downstream ML tasks)
+
+**Metrics Evaluated**:
+- **KS Similarity**: Compares cumulative distribution functions (CDFs) of raw/synthetic data (closer to 1 = better)
+- **Pearson Correlation**: Measures preservation of variable relationships (closer to 1 = better)
+- **Mean/Median/Variance Difference**: Differences in basic statistics (lower = better)
+- **Normalized Mutual Information (NMI)**: Measures variable dependence (closer to 1 = better)
+
+**Dependencies**: Raw data (Phase 1), synthetic data (Phase 2)
+
+**Operation**:
+```bash
+python utility.py
+```
+
+**Duration**: 5–8 minutes
+
+**Expected Results (Consistent with Paper Table 9)**:
+
+| Model | KS Similarity | Pearson Correlation | Mean Difference | NMI |
+|-------|---------------|---------------------|-----------------|-----|
+| GMM | ~0.97 | ~0.99 | ~0.01 | ~0.99 |
+| Gaussian Copula | ~0.97 | ~0.97 | ~0.016 | ~0.99 |
+| Random | 1.0 | 1.0 | 0.0 | 1.0 |
+
+### Phase 6: Generate Visualization Plots
+
+**Run Script**: `examples/plots.py`
+
+**Purpose**: Generate 5 key plots from the paper to visualize results
+
+**Dependencies**:
+- Raw/synthetic data (Phases 1–2)
+- Preprocessed data (Phase 3) for pairwise plots
+
+**Operation**:
+```bash
+# Create a directory to save plots (avoids "no such file" errors)
+mkdir -p ../plots  
+# Run the plotting script
+python plots.py
+```
+
+**Duration**: 5–10 minutes
+
+**Expected Outputs (Saved in `../plots/`)**:
+
+| Plot File | Corresponding Paper Figure | Core Content |
+|-----------|---------------------------|--------------|
+| `basic_stats_mean_diabetes_plot.png` | Figure 3 | Mean comparison (raw vs. synthetic data) |
+| `wasserstein_diabetes_plot.png` | Figure 4 | Wasserstein distance (distribution similarity) |
+| `correlation_heatmap_cardio_tvae.png` | Figure 5 | Correlation heatmap (variable relationships) |
+| `ks_similarity_insurance_plot.png` | Figure 6 | KS similarity bar chart |
+| `mi_heatmap_insurance_copulagan.png` | Figure 7 | Mutual information heatmap (variable dependence) |
+
+**Verification**:
+```bash
+# Check if plots are generated
+ls ../plots/
+```
+
+## 4. Result Verification (Signs of Success)
+
+Reproduction is successful if all of the following are true:
+
+- **Metrics Match the Paper**: Privacy/utility metrics align with Tables 3, 6, 7, 8, and 9
+- **Plots Are Valid**: Visualizations in `../plots/` match the trends of Figures 3–7 (e.g., synthetic data means overlap with raw data)
+- **Key Conclusion Holds**:
+  - Generative models (CTGAN, GMM) balance privacy and utility
+  - The Random model has perfect utility but no privacy protection
+  - GMM achieves the best overall trade-off (NNAA ≈ 0.58, KS ≈ 0.97)

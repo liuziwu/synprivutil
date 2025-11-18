@@ -1,3 +1,7 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+
 import pandas as pd
 from privacy_utility_framework.privacy_utility_framework.metrics.privacy_metrics.attacks.inference_class import \
     InferenceCalculator

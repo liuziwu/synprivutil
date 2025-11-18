@@ -1,3 +1,8 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+
+
 import pandas as pd
 
 from privacy_utility_framework.privacy_utility_framework.metrics.privacy_metrics.distance.disco import \
@@ -108,8 +113,8 @@ def privacy_metric_manager_example():
     for key, value in results.items():
         print(f"{key}: {value}")
 
-# dcr_example()
-# nndr_example()
-# nnaa_example()
-# privacy_metric_manager_example()
-# disco_new()
+dcr_example()
+nndr_example()
+nnaa_example()
+privacy_metric_manager_example()
+disco_example()

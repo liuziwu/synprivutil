@@ -1,3 +1,7 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
@@ -123,10 +127,10 @@ def basic_stats_plot_example():
             all_stats[f'{orig}_{syn}'] = calc.compute_basic_stats()
         for stat in ['mean', 'median', 'var']:
             plot_all_stats_for_stat(all_stats, stat, orig)
-# mutual_information_plot_example()
-# pairwise_plot_example()
-# plot_attributes_example()
-# ks_test_plot_comparison()
-# correlation_plot_example()
-# wasserstein_plot_example()
-# basic_stats_plot_example()
+mutual_information_plot_example()
+pairwise_plot_example()
+plot_attributes_example()
+ks_test_plot_comparison()
+correlation_plot_example()
+wasserstein_plot_example()
+basic_stats_plot_example()

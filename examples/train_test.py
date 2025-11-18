@@ -1,3 +1,8 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+
+import os
 import pandas as pd
 from privacy_utility_framework.privacy_utility_framework.utils.utils import dynamic_train_test_split
 
@@ -8,6 +13,14 @@ def train_test_example():
 
     # Specify the folder for saving train and test datasets
     folder = f"{orig}_datasets"
+    
+     
+    # 新增：创建insurance_datasets/train和test目录（不存在则创建，递归创建子目录）
+    train_dir = f"{folder}/train"
+    test_dir = f"{folder}/test"
+    os.makedirs(train_dir, exist_ok=True)  # exist_ok=True：目录存在也不报错
+    os.makedirs(test_dir, exist_ok=True)
+    
 
     # Load the original dataset from the specified path
     data = pd.read_csv(f'../datasets/original/{orig}.csv', delimiter=',')
@@ -20,4 +33,5 @@ def train_test_example():
     train.to_csv(f"{folder}/train/{orig}.csv", index=False)
     test.to_csv(f"{folder}/test/{orig}.csv", index=False)
 
-# train_test_example()
+
+train_test_example()
