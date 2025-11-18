@@ -65,7 +65,6 @@ ls insurance_datasets/train/ && ls insurance_datasets/test/
 python synthetic_data_generation.py
 ```
 
-**Duration**: 10–15 minutes (CTGAN/CopulaGAN take longer due to neural network training)
 
 **Expected Output**:
 - 6 synthetic data files (e.g., `ctgan_sample.csv`, `gmm_sample.csv`) in `insurance_datasets/syn_on_train/`
@@ -95,9 +94,7 @@ ls insurance_datasets/syn_on_train/*.csv
 python dataset_transform_normalization.py
 ```
 
-**When to Run**:
-- ✅ Mandatory: If you later calculate distance-based privacy metrics (DCR/NNDR) or plot pairwise relationship graphs
-- ❌ Optional: If you only evaluate attack-based privacy metrics or basic utility metrics (e.g., KS similarity)
+
 
 **Success Criterion**: The script prints normalized data (e.g., `original_dataset.transformed_normalized_data`) without errors
 
@@ -121,7 +118,7 @@ Privacy assessment has two sub-types: attack-based (simulate real-world attacks)
 python privacy_attacks.py
 ```
 
-**Duration**: 5–8 minutes
+
 
 **Expected Results (Consistent with Paper Table 8)**:
 
@@ -149,7 +146,6 @@ python privacy_attacks.py
 python privacy_distance.py
 ```
 
-**Duration**: 3–5 minutes
 
 **Expected Results (Consistent with Paper Table 7)**:
 
@@ -178,7 +174,7 @@ python privacy_distance.py
 python utility.py
 ```
 
-**Duration**: 5–8 minutes
+
 
 **Expected Results (Consistent with Paper Table 9)**:
 
@@ -206,7 +202,7 @@ mkdir -p ../plots
 python plots.py
 ```
 
-**Duration**: 5–10 minutes
+
 
 **Expected Outputs (Saved in `../plots/`)**:
 
