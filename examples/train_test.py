@@ -15,10 +15,10 @@ def train_test_example():
     folder = f"{orig}_datasets"
     
      
-    # 新增：创建insurance_datasets/train和test目录（不存在则创建，递归创建子目录）
+    
     train_dir = f"{folder}/train"
     test_dir = f"{folder}/test"
-    os.makedirs(train_dir, exist_ok=True)  # exist_ok=True：目录存在也不报错
+    os.makedirs(train_dir, exist_ok=True)  
     os.makedirs(test_dir, exist_ok=True)
     
 

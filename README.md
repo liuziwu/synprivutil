@@ -1,4 +1,7 @@
-# FEST Framework Reproduction Guide
+# FEST: A Unified Framework for Evaluating Synthetic Tabular Data
+[Original Paper](https://arxiv.org/abs/2508.16254)
+[Source Code for synprivutil](https://github.com/Karo2222/synprivutil "Hosted on GitHub")
+
 
 ## 1. Project Background
 
@@ -6,21 +9,29 @@
 
 **Key Outputs**:
 - Privacy/utility metrics for 6 synthetic models (CTGAN, GMM, CopulaGAN, etc.)
-- 5 types of core visualization plots from the paper (corresponding to Figures 3–7)
+- 5 types of core visualization plots from the paper 
 
-## 2. Prerequisites (Completed Items)
+## 2. Prerequisites 
 
-Ensure the following are ready before starting:
+## Create Virtual Environment
 
-**System Environment**: Linux (Python 3.10 and dependencies like sdv, anonymeter, and matplotlib are installed)
+```bash
+# Create conda environment
+conda create -n fest python=3.10.19
+conda activate fest
+```
 
-**Code Preparation**:
-- The synprivutil repository is cloned
-- All scripts (e.g., train_test.py) have resolved "module not found" errors (by adding the repository root to Python's search path)
+## Install Dependencies
+
+```bash
+# Install basic dependencies
+pip install -r requirements.txt
+```
+
 
 **Data Foundation**: The 3 core datasets (diabetes.csv, cardio.csv, insurance.csv) exist in the `datasets/original/` directory
 
-## 3. Core Reproduction Workflow (Execute in Order)
+## 3. Core Reproduction Workflow 
 
 ### Phase 1: Data Preparation (Generate Training/Test Sets)
 
@@ -39,14 +50,10 @@ python train_test.py
 ```
 
 **Expected Output**:
-- `insurance_datasets/train/insurance.csv` (≈1,070 rows)
-- `insurance_datasets/test/insurance.csv` (≈268 rows)
+- `insurance_datasets/train/insurance.csv` 
+- `insurance_datasets/test/insurance.csv` 
 
-**Verification**:
-```bash
-# Check if training/test files exist
-ls insurance_datasets/train/ && ls insurance_datasets/test/
-```
+
 
 ### Phase 2: Generate Synthetic Data
 
@@ -70,11 +77,7 @@ python synthetic_data_generation.py
 - 6 synthetic data files (e.g., `ctgan_sample.csv`, `gmm_sample.csv`) in `insurance_datasets/syn_on_train/`
 - Corresponding model files (e.g., `ctgan_model.pkl`) for re-use
 
-**Verification**:
-```bash
-# Check for synthetic data files
-ls insurance_datasets/syn_on_train/*.csv
-```
+
 
 ### Phase 3: Data Preprocessing (Run On-Demand)
 
@@ -230,3 +233,17 @@ Reproduction is successful if all of the following are true:
   - Generative models (CTGAN, GMM) balance privacy and utility
   - The Random model has perfect utility but no privacy protection
   - GMM achieves the best overall trade-off (NNAA ≈ 0.58, KS ≈ 0.97)
+
+## Citing NSmark
+
+```
+@misc{niu2025festunifiedframeworkevaluating,
+      title={FEST: A Unified Framework for Evaluating Synthetic Tabular Data}, 
+      author={Weijie Niu and Alberto Huertas Celdran and Karoline Siarsky and Burkhard Stiller},
+      year={2025},
+      eprint={2508.16254},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2508.16254}, 
+}
+```
