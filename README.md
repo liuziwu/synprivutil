@@ -1,5 +1,7 @@
 # FEST: A Unified Framework for Evaluating Synthetic Tabular Data
+
 [Original Paper](https://arxiv.org/abs/2508.16254)
+
 [Source Code for synprivutil](https://github.com/Karo2222/synprivutil "Hosted on GitHub")
 
 
@@ -98,8 +100,6 @@ python dataset_transform_normalization.py
 ```
 
 
-
-**Success Criterion**: The script prints normalized data (e.g., `original_dataset.transformed_normalized_data`) without errors
 
 ### Phase 4: Privacy Assessment (Core Metrics)
 
@@ -217,13 +217,9 @@ python plots.py
 | `ks_similarity_insurance_plot.png` | Figure 6 | KS similarity bar chart |
 | `mi_heatmap_insurance_copulagan.png` | Figure 7 | Mutual information heatmap (variable dependence) |
 
-**Verification**:
-```bash
-# Check if plots are generated
-ls ../plots/
-```
 
-## 4. Result Verification (Signs of Success)
+
+## 4. Result Verification 
 
 Reproduction is successful if all of the following are true:
 
