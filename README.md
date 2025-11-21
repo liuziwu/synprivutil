@@ -1,8 +1,8 @@
 # FEST: A Unified Framework for Evaluating Synthetic Tabular Data
 
-[Original Paper](https://arxiv.org/abs/2508.16254)
+This repo is a reproduction of the paper: [FEST: A Unified Framework for Evaluating Synthetic Tabular Data](https://arxiv.org/abs/2508.16254).
 
-[Source Code for synprivutil](https://github.com/Karo2222/synprivutil "Hosted on GitHub")
+This repository is developed based on an existing open-source repository: [synprivutil](https://github.com/Karo2222/synprivutil).
 
 
 ## 1. Project Background
@@ -230,7 +230,7 @@ Reproduction is successful if all of the following are true:
   - The Random model has perfect utility but no privacy protection
   - GMM achieves the best overall trade-off (NNAA ≈ 0.58, KS ≈ 0.97)
 
-## Citing NSmark
+## Citing FEST
 
 ```
 @misc{niu2025festunifiedframeworkevaluating,
