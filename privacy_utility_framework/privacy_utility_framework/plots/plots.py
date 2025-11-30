@@ -64,7 +64,7 @@ def mutual_information_heatmap(original_data, synthetic_data, figure_filepath, o
     fig.autofmt_xdate()
     fig.tight_layout()
     plt.subplots_adjust(top=0.83)
-    #plt.savefig(figure_filepath, bbox_inches='tight')
+    plt.savefig(figure_filepath, bbox_inches='tight')
     plt.show()
 
 
@@ -110,5 +110,5 @@ def plot_all_stats_for_stat(all_stats, stat, orig):
     plt.xticks(rotation=45)
     plt.legend()
     plt.tight_layout()
-    #plt.savefig(f"{orig}_{stat.capitalize()}_basic_stats.png", bbox_inches='tight')
+    plt.savefig(f"{orig}_{stat.capitalize()}_basic_stats.png", bbox_inches='tight')
     plt.show()
