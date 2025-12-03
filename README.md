@@ -15,6 +15,15 @@ This repository is developed based on an existing open-source repository: [synpr
 
 ## 2. Prerequisites 
 
+## Dataset Download & Extraction
+```bash
+# Download the dataset 
+gdown https://drive.google.com/uc?id=1DRvFqnqQeqCXEjmrQ25-bqwDPY0DGkzr
+
+# Extract the dataset 
+unzip datasets.zip
+```
+
 ## Create Virtual Environment
 
 ```bash
